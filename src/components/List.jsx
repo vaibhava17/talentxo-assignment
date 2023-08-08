@@ -1,32 +1,35 @@
+import React from 'react';
 import clsx from 'clsx';
-import React from 'react'
 
 const List = (props) => {
   const {
-    data,
+    data = [],
     renderItem = () => { },
     className,
+    activeItem,
+    listRef,
     ...rest
   } = props;
   return (
     <div className={clsx("list", className)}>
-      <ul className="list-group" {...rest}>
-        {data.map((item, index) => {
+      <ul className="list-group" {...rest} ref={listRef}>
+        {data.length > 0 ? data.map((item, index) => {
           const { ...rest } = item;
           return (
             <li
               key={index}
-              className="list-group-item"
               onClick={item.onClick}
+              type="button"
+              className={clsx("list-group-item pe-auto", { "active": item.id == activeItem })}
               {...rest}
             >
               {renderItem(item, index) || item.label}
             </li>
           )
-        })}
+        }) : <li className="list-group-item border-top-0">No data</li>}
       </ul>
     </div>
   )
-}
+};
 
-export default List
+export default List;

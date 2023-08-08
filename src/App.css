@@ -6,7 +6,6 @@
 
 .app {
   background-color: #f8f9fa;
-  height: 100%;
 }
 
 .line {
@@ -14,7 +13,23 @@
   height: 1px;
 }
 
-.list {
-  height: calc(100vh - 190px);
+.list-group {
+  max-height: calc(100vh - 500px);
   overflow: scroll;
+}
+
+.box {
+  height: 50%;
+}
+
+.list-group-item.active {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 420px) {
+  .box {
+    height: auto;
+  }
 }

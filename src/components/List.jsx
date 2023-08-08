@@ -3,24 +3,24 @@ import React from 'react'
 
 const List = (props) => {
   const {
-    options,
-    renderOptions,
+    data,
+    renderItem = () => { },
     className,
     ...rest
   } = props;
   return (
     <div className={clsx("list", className)}>
       <ul className="list-group" {...rest}>
-        {options.map((option, index) => {
-          const { ...rest } = option;
+        {data.map((item, index) => {
+          const { ...rest } = item;
           return (
             <li
               key={index}
               className="list-group-item"
-              onClick={option.onClick}
+              onClick={item.onClick}
               {...rest}
             >
-              {renderOptions(option, index)}
+              {renderItem(item, index) || item.label}
             </li>
           )
         })}

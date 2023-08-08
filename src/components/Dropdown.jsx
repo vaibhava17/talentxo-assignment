@@ -24,31 +24,19 @@ const Dropdown = (props) => {
         onClick={() => setVisible(!visible)}
       />
       <List
-        className={clsx("dropdown-menu p-0 border-0", { "show": visible })}
-        options={menu}
+        className={clsx("dropdown-menu p-0 border-start-0 border-end-0", { "show": visible })}
+        data={menu}
         onChange={onChange}
-        renderOptions={(option, index) => {
-          const { ...rest } = option;
+        renderItem={(item, index) => {
+          const { ...rest } = item;
           return (
             <span className="dropdown-item" key={index} {...rest}>
-              {option.label}
+              {item.label}
             </span>
           )
         }}
         {...rest}
       />
-      {/* <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li>
-          <a className="dropdown-item" href="#">
-            Action
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>
-      </ul> */}
     </div >
   )
 }

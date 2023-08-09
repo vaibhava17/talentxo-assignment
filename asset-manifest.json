@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/talentxo-assignment/static/css/main.0ae76ec9.css",
+    "main.js": "/talentxo-assignment/static/js/main.e096f22d.js",
+    "static/js/787.34b6078d.chunk.js": "/talentxo-assignment/static/js/787.34b6078d.chunk.js",
+    "index.html": "/talentxo-assignment/index.html",
+    "main.0ae76ec9.css.map": "/talentxo-assignment/static/css/main.0ae76ec9.css.map",
+    "main.e096f22d.js.map": "/talentxo-assignment/static/js/main.e096f22d.js.map",
+    "787.34b6078d.chunk.js.map": "/talentxo-assignment/static/js/787.34b6078d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ae76ec9.css",
+    "static/js/main.e096f22d.js"
+  ]
+}

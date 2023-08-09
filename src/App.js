@@ -18,7 +18,6 @@ function App() {
     setSelectedItem(e.target.id);
   };
 
-  // scroll to selected item in to view when it changes or list data changes
   React.useEffect(() => {
     if (selectedItem && listScrollRef.current) {
       const index = listData.findIndex((item) => item.id === selectedItem);
@@ -33,8 +32,6 @@ function App() {
       const item = listScrollRef.current.children[index];
       item.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
-
-    console.log(listScrollRef)
   }, [selectedItem, listData]);
 
   const handleAddItem = () => {

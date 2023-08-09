@@ -20,7 +20,7 @@ const List = (props) => {
               key={index}
               onClick={item.onClick}
               type="button"
-              className={clsx("list-group-item pe-auto", { "active": item.id == activeItem })}
+              className={clsx("list-group-item pe-auto", { "active": item.id === activeItem })}
               {...rest}
             >
               {renderItem(item, index) || item.label}

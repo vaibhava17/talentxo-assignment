@@ -2,6 +2,8 @@
 
 This repository contains a React application that implements a functionality involving an item list and corresponding actions. The application includes GitHub Pages deployment configuration, unit testing for components, and all the described features. Below, you'll find information on how to set up and use the application, as well as details about the implemented functionality.
 
+[LIVE DEMO](https://vaibhava17.github.io/talentxo-assignment/) | [REPOSITORY](https://github.com/vaibhava17/talentxo-assignment)
+
 ## Features
 
 ### Click on Add Button

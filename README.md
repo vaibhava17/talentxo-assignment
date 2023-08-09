@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# TalentXO React Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a React application that implements a functionality involving an item list and corresponding actions. The application includes GitHub Pages deployment configuration, unit testing for components, and all the described features. Below, you'll find information on how to set up and use the application, as well as details about the implemented functionality.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Click on Add Button
+- Clicking the "Add New Item to List" button will add an item to the item list in the left panel.
+- It will also dynamically add the newly added item as an option in the dropdown menu.
 
-### `npm start`
+### Jump to Item Action
+- Selecting an option from the dropdown will scroll the left panel to the corresponding item.
+- The selected item will be highlighted to indicate its selection.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Click on Previous Button
+- Clicking the "Previous Item" button will select the item just before the currently selected one in the left panel.
+- The previously selected item will be highlighted.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Click on Next Button
+- Clicking the "Next Item" button will select the item just after the currently selected one in the left panel.
+- The next item will be highlighted.
 
-### `npm test`
+### Click on Delete Button
+- Clicking the "Delete Item" button will remove the currently selected item from the left panel.
+- The next item in the list will automatically be selected and highlighted.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Click on Any Item in the Left Panel
+- Clicking on any item in the left panel will display the corresponding "ITEM X" in the right panel.
+- The value of X corresponds to the item number and will be dynamically updated.
+- For example, clicking on "Item 1" will display "Item 1" in the right panel.
 
-### `npm run build`
+## Setup and Deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository: `git clone https://github.com/vaibhava17/talentxo-assignment.git`
+2. Navigate to the project directory: `cd talentxo-assignment`
+3. Install dependencies: `npm install`
+4. Run the application locally: `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## GitHub Pages Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application can be deployed using GitHub Pages. This repository already contains a GitHub Actions workflow configuration (`deploy.yml`) for automated deployment. To set up GitHub Pages deployment:
 
-### `npm run eject`
+1. Push your changes to the `dev` branch.
+2. The GitHub Actions workflow will automatically build and deploy your app to GitHub Pages.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Unit Testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Unit testing for components is implemented using a testing framework such as Jest and React Testing Library. You can run the unit tests using the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+npm test
+```

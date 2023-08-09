@@ -90,13 +90,13 @@ function App() {
           <Dropdown
             label="Jump to Item"
             menu={listData}
-            className="mx-2 mt-2"
+            className="m-2"
           />
         </Col>
       </Row>
       <Row>
         <Col>
-          <div className='mx-2 mt-5 line' />
+          <div className='mx-2 line' />
         </Col>
       </Row>
       <Row>

@@ -33,8 +33,9 @@ This repository contains a React application that implements a functionality inv
 
 1. Clone the repository: `git clone https://github.com/vaibhava17/talentxo-assignment.git`
 2. Navigate to the project directory: `cd talentxo-assignment`
-3. Install dependencies: `npm install`
-4. Run the application locally: `npm start`
+3. Install Node.js version 18 (if not installed).
+4. Install dependencies: `npm install`
+5. Run the application locally: `npm start`
 
 ## GitHub Pages Deployment
 
@@ -50,3 +51,45 @@ Unit testing for components is implemented using a testing framework such as Jes
 ```sh
 npm test
 ```
+
+### Button Component
+
+In this test suite, we have two test cases:
+
+1. The first test case checks if the Button component renders with the default label "Click me" and has the "btn" and "btn-primary" classes. It also tests whether the onClick event is triggered when the button is clicked.
+
+2. The second test case checks if the Button component renders with custom label and custom className, and again verifies the onClick event is triggered correctly.
+
+### List Component
+
+In this test suite:
+
+1. The first test case checks if the List component correctly renders the "No data" message when the data prop is empty.
+
+2. The second test case verifies if the List component renders list items with provided data and handles item click events.
+
+3. The third test case ensures that the List component correctly applies custom class names and binds the listRef reference.
+
+### Dropdown Component
+
+In this test suite:
+
+1. The first test case checks if the Dropdown component renders correctly, toggles the dropdown menu, and handles item click events.
+
+2. The second test case verifies that the Dropdown component correctly applies custom label and custom class names.
+
+### DisplayNav Component
+
+n this test suite:
+
+1. The first test case checks if the DisplayNav component renders with the default previous and next buttons.
+
+2. The second test case verifies that the DisplayNav component correctly renders custom previous and next button labels, and handles their onClick events.
+
+3. The third test case ensures that the DisplayNav component correctly applies custom class names.
+
+### App Component
+
+In this test suite:
+
+1. The test case checks if the App component renders correctly.

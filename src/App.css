@@ -6,16 +6,17 @@
 
 .app {
   background-color: #f8f9fa;
+  height: 630px;
 }
 
 .line {
-  background-color: black;
+  background-color: #dee2e6;
   height: 1px;
 }
 
 .list-group {
   max-height: calc(100vh - 500px);
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .box {

@@ -5,13 +5,15 @@ import DisplayNav from '../components/DisplayNav';
 
 describe('DisplayNav', () => {
   it('renders with default previous and next buttons', () => {
-    const { getByText } = render(<DisplayNav />);
+    const { getByText, container } = render(<DisplayNav />);
     
     const prevButton = getByText('Previous');
     const nextButton = getByText('Next');
 
     expect(prevButton).toBeInTheDocument();
     expect(nextButton).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   it('renders with custom previous and next button labels and handles onClick events', () => {
@@ -24,7 +26,7 @@ describe('DisplayNav', () => {
       onClick: jest.fn(),
     };
 
-    const { getByText } = render(
+    const { getByText, container } = render(
       <DisplayNav prevBtnProps={prevBtnProps} nextBtnProps={nextBtnProps} />
     );
 
@@ -36,6 +38,8 @@ describe('DisplayNav', () => {
 
     expect(prevBtnProps.onClick).toHaveBeenCalledTimes(1);
     expect(nextBtnProps.onClick).toHaveBeenCalledTimes(1);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('applies custom class names', () => {
@@ -46,5 +50,7 @@ describe('DisplayNav', () => {
 
     const displayNav = container.querySelector('.justify-content-between');
     expect(displayNav).toHaveClass(customClassName);
+    
+    expect(container).toMatchSnapshot();
   });
 });

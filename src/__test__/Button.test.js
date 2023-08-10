@@ -6,7 +6,7 @@ import Button from '../components/Button';
 describe('Button', () => {
   it('renders with default label and handles onClick event', () => {
     const onClickMock = jest.fn(); // Mocking the onClick function
-    const { getByText } = render(<Button onClick={onClickMock} />);
+    const { getByText, container } = render(<Button onClick={onClickMock} />);
     
     const button = getByText('Click me');
     expect(button).toBeInTheDocument();
@@ -16,13 +16,15 @@ describe('Button', () => {
     fireEvent.click(button); // Simulate a click event on the button
 
     expect(onClickMock).toHaveBeenCalled();
+
+    expect(container).toMatchSnapshot();
   });
 
   it('renders with custom label and custom className', () => {
     const onClickMock = jest.fn();
     const customLabel = 'Custom Button';
     const customClassName = 'custom-class';
-    const { getByText } = render(
+    const { getByText, container } = render(
       <Button
         onClick={onClickMock}
         label={customLabel}
@@ -39,5 +41,7 @@ describe('Button', () => {
     fireEvent.click(button);
 
     expect(onClickMock).toHaveBeenCalled();
+
+    expect(container).toMatchSnapshot();
   });
 });

@@ -29,6 +29,8 @@ describe('Dropdown', () => {
     fireEvent.click(dropdownButton);
 
     expect(container.querySelector('.list')).toHaveClass('show');
+
+    expect(container).toMatchSnapshot();
   });
 
   it('applies custom label and custom class names', () => {
@@ -41,5 +43,7 @@ describe('Dropdown', () => {
     const dropdownButton = container.querySelector('.dropdown');
     expect(dropdownButton).toBeInTheDocument();
     expect(dropdownButton).toHaveClass('custom-dropdown');
+
+    expect(container).toMatchSnapshot();
   });
 });

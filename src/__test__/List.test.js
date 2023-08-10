@@ -5,10 +5,12 @@ import List from '../components/List';
 
 describe('List', () => {
   it('renders with default "No data" message when data is empty', () => {
-    const { getByText } = render(<List />);
+    const { getByText, container } = render(<List />);
     const noDataMessage = getByText('No data');
     expect(noDataMessage).toBeInTheDocument();
     expect(noDataMessage).toHaveClass('list-group-item');
+
+    expect(container).toMatchSnapshot();
   });
 
   it('renders list items with provided data and handles item click', () => {
@@ -18,7 +20,7 @@ describe('List', () => {
     ];
 
     const activeItem = 2;
-    const { getByText } = render(
+    const { getByText, container } = render(
       <List
         data={data}
         activeItem={activeItem}
@@ -37,6 +39,8 @@ describe('List', () => {
 
     expect(data[0].onClick).toHaveBeenCalledTimes(1);
     expect(data[1].onClick).toHaveBeenCalledTimes(1);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('renders list with custom class names and a listRef', () => {
@@ -54,5 +58,7 @@ describe('List', () => {
 
     const listGroup = container.querySelector('.list-group');
     expect(listRef.current).toBe(listGroup);
+
+    expect(container).toMatchSnapshot();
   });
 });
